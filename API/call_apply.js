@@ -25,7 +25,9 @@ function pet2(words){
 }
 
 function dog2(words){
+	console.log(this==global)
 	pet2.call(this,words)
 }
+dog2()
 var d=new dog2('wang')
 d.speak()
